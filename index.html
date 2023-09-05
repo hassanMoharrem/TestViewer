@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="theme-color" content="#000000"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--load all styles for font aswesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- My own style -->
+    <link href="assets/css/style.css" rel="stylesheet"/>
+
+    <title>Hello, world!</title>
+</head>
+<body>
+<div class="wrapper  position-relative container">
+    <div class="header">
+        <nav class="navbar navbar-expand-lg bg-white pt-2 pb-2 border-bottom">
+            <a class="navbar-brand m-0 py-0" href="#">
+                <img src="assets/images/logo.png" width="60" alt="">
+            </a>
+            <button class="navbar-toggler  border rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-ellipsis-h"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav mt-2 mx-auto mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link px-3 py-1 font-19 mb-0 active-color" aria-current="page" href="#">الرئيسية</a>
+                        <span class="after-link"></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-1 font-19 mb-0 text-dark" href="#">من نحن</a>
+                        <span class="after-link"></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-1 font-19 mb-0 text-dark" href="#">المدونة</a>
+                        <span class="after-link"></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-1 font-19 mb-0 text-dark" href="#">تواصل معنا</a>
+                        <span class="after-link"></span>
+                    </li>
+                </ul>
+                <ul class="list-unstyled p-1 my-auto">
+                    <li class="d-inline-block px-2">
+                        <button type="button" class="btn rounded-pill button-main text-white font-size-sub " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            تسجيل الدخول
+                        </button>
+                    </li>
+                    <li class="d-inline-block px-2">
+                        <a href="" class="btn rounded-pill button-sub font-size-sub">انضم إلينا</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Vertically centered scrollable modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-30">
+                        <div class="rounded-30  p-0">
+                            <button type="button" class="btn p-0 m-3 position-absolute top-0 start-0" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times text-muted font-size-sub"></i></button>
+
+                            <div class="text-center p-4">
+                                <img src="assets/images/logo.png" class="bg-white mn-t-5 mb-3 img-contain rounded-circle p-2 shadow " alt="" width="100px" height="100px">
+                                <div class="title-form">
+                                    <h5 class="mb-2">سجل الدخول لحسابك</h5>
+                                    <div class="text-center or position-relative ">
+                                        <span class="text-muted position-relative h6 px-4 bg-white">أو</span>
+                                    </div>
+
+                                </div>
+                                <div class="text-center my-3">
+                                    <form action="">
+                                        <div class="mb-3 text-end">
+                                            <label for="email" class="form-label">رقم الجوال أو البريد الإلكتروني</label>
+                                            <input class="form-control rounded-pill" id="email" type="text" placeholder="رقم الجوال أو البريد الإلكتروني" aria-label="default input example">
+                                        </div>
+                                        <div class="mb-3 text-end">
+                                            <label for="password" class="form-label ">كلمة المرور</label>
+                                            <input class="form-control rounded-pill" id="password" type="text" placeholder="كلمة المرور" aria-label="default input example">
+                                        </div>
+                                        <div class="mb-4 text-end">
+                                            <h6 class="text-muted"><a href="" class="text-muted">نسيت كلمة المرور</a></h6>
+                                        </div>
+                                        <div class="text-start my-3">
+                                            <button type="submit" class="shadow-sm btn btn-sm btn-success rounded-pill ms-3 px-3 py-2"><span class="h5 mb-0">سجل</span><i class="fas fa-long-arrow-alt-left me-2 h6 mb-0"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="mt-4 mb-2 text-center">
+                                    <h6 class="text-muted">ليس لديك حساب على بناء ؟<a href="" class="text-primary me-2">تسجيل حساب
+                                        جديد</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="position-fixed bottom-0 start-0 my-4 mx-5">
+            <div class="row pt-2 justify-content-end">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <a href="" class="font-12 sub-color d-block w-auto ms-1 mb-3"><i class="fa-brands fa-facebook-f ms-4"></i></a>
+                    <a href="" class="font-12 sub-color d-block w-auto ms-1 mb-3"><i class="fa-brands fa-twitter ms-4"></i></a>
+                    <a href="" class="font-12 sub-color d-block w-auto ms-1 mb-3"><i class="fa-brands fa-linkedin-in ms-4"></i></a>
+                    <a href="" class="font-12 sub-color d-block w-auto ms-1 mb-3"><i class="fa-brands fa-instagram ms-4"></i></a>
+                </div>
+            </div>
+        </div>
+        <section class="bg-section my-3 ">
+            <div class="container mt-2">
+                <div class="row h-v-100 justify-content-center align-items-center">
+                    <div class="col-md-6">
+                        <div class="align-bottom px-4">
+                            <h1 class="sub-color font-big">مكتب <span class="main-color">تعليم العارض</span></h1>
+                            <h2 class="font-26 mt-4 lh-base">يختص مكتب تعليم العارض بتقديم برامج مميزة</h2>
+                            <p class="text-muted h6 my-3 lh-base">تكون الشهادات والاعتمادات التي تُمنح في نهاية الدورات مهمة للمشتركين، حيث يمكن أن تساعدهم في تحسين فرصهم المهنية والتقدم في حياتهم المهنية</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-start ">
+                        <img src="assets/images/hero_image.png" class="img-slid px-4 w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-4 px-5">
+            <div class="text-center mb-4">
+                <h2>هنا تبدأ رحلتك من العِلم إلى العَمل</h2>
+                <p class="text-muted w-50 mx-auto">تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 my-2 my-md-auto">
+                    <div class="row w-100 mx-auto">
+                        <div class="col-md-3 mb-3 ">
+                            <div class="px-2 py-2 text-center rounded-10 shadow-sm border h-100">
+                                <img src="assets/images/certificate.png" width="40" alt="">
+                                <h5 class="text-sub font-19 my-2">شهادات واعتمادات</h5>
+                                <p class="text-muted font-size-sub">يمكن أن تكون الشهادات والاعتمادات التي تُمنح في نهاية الدورات مهمة للمشتركين، حيث يمكن أن تساعدهم في تحسين فرصهم المهنية والتقدم في حياتهم المهنية</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3 ">
+                            <div class="px-2 py-2 text-center rounded-10 shadow-sm border h-100">
+                                <img src="assets/images/communication.png" width="40" alt="">
+                                <h5 class="text-sub font-19 my-2">دعم فردي</h5>
+                                <p class="text-muted font-size-sub">يقدم المركز دعماً فردياً للطلاب والمتدربين، سواء عبر الاستشارات الشخصية أو جلسات التوجيه، لضمان تحقيق أهداف التطوير الشخصي لكل فرد</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3 ">
+                            <div class="px-2 py-2 text-center rounded-10 shadow-sm border h-100">
+                                <img src="assets/images/books.png" width="40" alt="">
+                                <h5 class="text-sub font-19 my-2">محاضرين متخصصين</h5>
+                                <p class="text-muted font-size-sub">يعتمد المركز على كفاءة محاضريه ومدربيه. يجب أن يكون لديهم خبرة ومعرفة عميقة في مجالات التنمية الشخصية والمهنية</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3 ">
+                            <div class="px-2 py-2 text-center rounded-10 shadow-sm border h-100">
+                                <img src="assets/images/communication.png" width="40" alt="">
+                                <h5 class="text-sub font-19 my-2">تقديم المعرفة الثقافية</h5>
+                                <p class="text-muted font-size-sub">يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="bg-section pt-5 pb-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="text-center mb-4">
+                            <h2>برامجنا</h2>
+                            <p class="text-muted w-50 mx-auto">يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+                        </div>
+                        <div class="owl-carousel owl-carousel-1 owl-theme">
+                            <div class="item">
+                                <div class="border shadow-sm rounded-20 bg-white">
+                                    <div class="position-relative">
+                                        <img src="assets/images/slide.jpg" class="w-100 cover rounded-top-30" height="180"
+                                             alt="">
+                                    </div>
+                                    <div class="bg-white py-2 px-3 rounded-bottom-20 border-top">
+                                      <h4 class="font-19 main-color"><a href="" class="font-19 main-color">تطوير الذات</a></h4>
+                                        <p>يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+                                        <div class="pt-2 text-start">
+                                            <h5 class="font-size-sub button-sub d-inline-block me-auto rounded-pill mb-0">إشترك الان</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="border shadow-sm rounded-20 bg-white">
+                                    <div class="position-relative">
+                                        <img src="assets/images/slide.jpg" class="w-100 cover rounded-top-30" height="180"
+                                             alt="">
+                                    </div>
+                                    <div class="bg-white py-2 px-3 rounded-bottom-20 border-top">
+                                        <h4 class="font-19 main-color"><a href="" class="font-19 main-color">تطوير الذات</a></h4>
+                                        <p>يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+                                        <div class="pt-2 text-start">
+                                            <h5 class="font-size-sub button-sub d-inline-block me-auto rounded-pill mb-0">إشترك الان</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="border shadow-sm rounded-20 bg-white">
+                                    <div class="position-relative">
+                                        <img src="assets/images/slide.jpg" class="w-100 cover rounded-top-30" height="180"
+                                             alt="">
+                                    </div>
+                                    <div class="bg-white py-2 px-3 rounded-bottom-20 border-top">
+                                        <h4 class="font-19 main-color"><a href="" class="font-19 main-color">تطوير الذات</a></h4>
+                                        <p>يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+                                        <div class="pt-2 text-start">
+                                            <h5 class="font-size-sub button-sub d-inline-block me-auto rounded-pill mb-0">إشترك الان</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="border shadow-sm rounded-20 bg-white">
+                                    <div class="position-relative">
+                                        <img src="assets/images/slide.jpg" class="w-100 cover rounded-top-30" height="180"
+                                             alt="">
+                                    </div>
+                                    <div class="bg-white py-2 px-3 rounded-bottom-20 border-top">
+                                        <h4 class="font-19 main-color"><a href="" class="font-19 main-color">تطوير الذات</a></h4>
+                                        <p>يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+                                        <div class="pt-2 text-start">
+                                            <h5 class="font-size-sub button-sub d-inline-block me-auto rounded-pill mb-0">إشترك الان</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="border shadow-sm rounded-20 bg-white">
+                                    <div class="position-relative">
+                                        <img src="assets/images/slide.jpg" class="w-100 cover rounded-top-30" height="180"
+                                             alt="">
+                                    </div>
+                                    <div class="bg-white py-2 px-3 rounded-bottom-20 border-top">
+                                        <h4 class="font-19 main-color"><a href="" class="font-19 main-color">تطوير الذات</a></h4>
+                                        <p>يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+                                        <div class="pt-2 text-start">
+                                            <h5 class="font-size-sub button-sub d-inline-block me-auto rounded-pill mb-0">إشترك الان</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center my-4">
+                            <a class="btn button-sub rounded-pill px-4 d-inline-block mx-auto"
+                               href="#">عرض الكل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-light-edit position-relative">
+                <div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="text-center mb-4">
+                                <h2>مميزات العارض</h2>
+                                <p class="text-muted w-75 w-md-50 mx-auto px-3">يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+                            </div>
+                            <div class="px-3">
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <div class="p-4 mt-4 bg-images" data-aos="fade-right" data-aos-duration="2000">
+                                            <h2 class="mb-4"><img src="assets/images/time.png" width="40px" class="ms-2"
+                                                                  alt=""><span class="align-middle sub-color">نبذة عن<span class="main-color"> العارض </span></span>
+                                            </h2>
+                                            <p class="pe-3 lh-base text-dark font-18">يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي يمكن أيضًا لمركز التعليم التطويري تقديم دورات وبرامج تعريفية بالثقافة والقيم السعودية، مما يسهم في تعزيز التفاهم والتواصل الثقافي</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 my-auto text-center">
+                                        <img src="assets/images/Setup-bro.png" class="w-50 mx-auto rounded-10 p-4" data-aos="fade-left"
+                                             data-aos-duration="2000" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="my-4">
+            <div class="container text-center">
+                <h2 class="font-bold text-uppercase font-45">شركاؤنا</h2>
+                <p class="text-muted font-18 w-100 w-md-75">شركائنا الذين نسعد بهم و نتبادل الخبرات معهم</p>
+            </div>
+            <div class="container mt-4">
+                <div class="row text-start justify-content-between">
+                    <div class="col-4 mb-3">
+                        <img src="assets/images/par1.png" width="100%" height="70" class="contain" alt="">
+                    </div>
+                    <div class="col-4 mb-3">
+                        <img src="assets/images/par1.png" width="100%" height="70" class="contain" alt="">
+                    </div>
+                    <div class="col-4 mb-3">
+                        <img src="assets/images/par1.png" width="100%" height="70" class="contain" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--    Start Asked Section-->
+        <section class="my-4">
+            <div class="container">
+                <div class="bg-white rounded p-4">
+                    <div class="text-center">
+                        <h4 class="font-bold my-2">الأسئلة الشائعة</h4>
+                        <p class="text-muted font-12 w-100 w-md-50 mx-auto">أسئلة يتم طرحها علينا دائما ربما تفيدك </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 my-auto">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="font-14 ">
+                                        <a class="btn collapsed-btn collapsed me-3 toggle-button" data-bs-toggle="collapse"
+                                           href="#collapseExample" role="button" aria-expanded="false"
+                                           aria-controls="collapseExample" id="toggleButton">
+                                            <i class="fa-solid fa-plus" id="myButton"></i>
+                                        </a>
+                                        ما هي طبيعة الدورات ؟
+                                    </p>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="card-body">
+                                            <p class="font-12">
+                                                Wordpress Is Open Source Web Software That You Can Install On Your Web Server To
+                                                Create Your Website, Blog, Community, Or Network. Wordpress Started Out As A
+                                                Tool For Blogging, But Has Evolved Into A Full-Fledged Content Management System
+                                                (CMS), Capable Of Powering Websites, Networks, And Communities.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="font-14">
+                                    <a class="btn collapsed-btn collapsed me-3 toggle-button" data-bs-toggle="collapse"
+                                       href="#collapseExample1" role="button" aria-expanded="false"
+                                       aria-controls="collapseExample" id="toggleButton1">
+                                        <i class="fa-solid fa-plus" id="myButton1"></i>
+                                    </a>
+                                    كيف يمكنني أخذ الشهادة ؟
+                                </p>
+                                <div class="collapse" id="collapseExample1">
+                                    <div class="card-body">
+                                        <p class="font-12">
+                                            Wordpress Is Open Source Web Software That You Can Install On Your Web Server To
+                                            Create Your Website, Blog, Community, Or Network. Wordpress Started Out As A
+                                            Tool For Blogging, But Has Evolved Into A Full-Fledged Content Management System
+                                            (CMS), Capable Of Powering Websites, Networks, And Communities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="font-14">
+                                    <a class="btn collapsed-btn collapsed me-3 toggle-button" data-bs-toggle="collapse"
+                                       href="#collapseExample2" role="button" aria-expanded="false"
+                                       aria-controls="collapseExample" id="toggleButton2">
+                                        <i class="fa-solid fa-plus" id="myButton2"></i>
+                                    </a>
+                                    ما هو سعر البرامج ؟
+                                </p>
+                                <div class="collapse" id="collapseExample2">
+                                    <div class="card-body">
+                                        <p class="font-12">
+                                            Wordpress Is Open Source Web Software That You Can Install On Your Web Server To
+                                            Create Your Website, Blog, Community, Or Network. Wordpress Started Out As A
+                                            Tool For Blogging, But Has Evolved Into A Full-Fledged Content Management System
+                                            (CMS), Capable Of Powering Websites, Networks, And Communities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="font-14">
+                                    <a class="btn collapsed-btn collapsed me-3 toggle-button" data-bs-toggle="collapse"
+                                       href="#collapseExample3" role="button" aria-expanded="false"
+                                       aria-controls="collapseExample" id="toggleButton3">
+                                        <i class="fa-solid fa-plus" id="myButton3"></i>
+                                    </a>
+                                    ما هي شروط التسجيل في هذه الدورات ؟
+                                </p>
+                                <div class="collapse" id="collapseExample3">
+                                    <div class="card-body">
+                                        <p class="font-12">
+                                            Wordpress Is Open Source Web Software That You Can Install On Your Web Server To
+                                            Create Your Website, Blog, Community, Or Network. Wordpress Started Out As A
+                                            Tool For Blogging, But Has Evolved Into A Full-Fledged Content Management System
+                                            (CMS), Capable Of Powering Websites, Networks, And Communities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="font-14">
+                                    <a class="btn collapsed-btn collapsed me-3 toggle-button" data-bs-toggle="collapse"
+                                       href="#collapseExample4" role="button" aria-expanded="false"
+                                       aria-controls="collapseExample" id="toggleButton4">
+                                        <i class="fa-solid fa-plus" id="myButton4"></i>
+                                    </a>
+                                    كيف يكنني أخذ الشهادة ؟
+                                </p>
+                                <div class="collapse" id="collapseExample4">
+                                    <div class="card-body">
+                                        <p class="font-12">
+                                            Wordpress Is Open Source Web Software That You Can Install On Your Web Server To
+                                            Create Your Website, Blog, Community, Or Network. Wordpress Started Out As A
+                                            Tool For Blogging, But Has Evolved Into A Full-Fledged Content Management System
+                                            (CMS), Capable Of Powering Websites, Networks, And Communities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 my-auto">
+                            <div class="text-start">
+                                <img src="assets/images/FAQs-rafiki.png" alt="" width="80%">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--    End Asked Section-->
+    </main>
+
+    </div>
+
+<footer>
+    <div class="p-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <img src="assets/images/logo.png" width="50px" class="ms-1" alt="">
+                    <h6 class="text-muted font-13 lh-base my-3 lh-base">تكون الشهادات والاعتمادات التي تُمنح في نهاية الدورات مهمة للمشتركين، حيث يمكن أن تساعدهم في تحسين فرصهم المهنية والتقدم في حياتهم المهنية</h6>
+                    <div>
+                        <a href="" class="mx-2"><i class="fab fa-youtube text-dark"></i></a>
+                        <a href="" class="mx-2"><i class="fab fa-instagram text-dark"></i></a>
+                        <a href="" class="mx-2"><i class="fab fa-twitter text-dark"></i></a>
+                        <a href="" class="mx-2"><i class="fab fa-facebook text-dark"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="mb-3 pe-3">العارض</h5>
+                    <ul class="list-unstyled ps-0 pe-3">
+                        <li class="mb-3 text-muted h6"><a href="" class="text-muted">الرئيسية</a></li>
+                        <li class="mb-3 text-muted h6"><a href="" class="text-muted">برامجنا</a></li>
+                        <li class="mb-3 text-muted h6"><a href="" class="text-muted">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="mb-3 pe-3">عنا</h5>
+                    <ul class="list-unstyled ps-0 pe-3">
+                        <li class="mb-3 text-muted h6"><a href="" class="text-muted">من نحن</a></li>
+                        <li class="mb-3 text-muted h6"><a href="" class="text-muted">الأخبار</a></li>
+                        <li class="mb-3 text-muted h6"><a href="" class="text-muted">إتفاقية الإستخدام</a></li>
+                        <li class="mb-3 text-muted h6"><a href="" class="text-muted">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="mb-3 pe-3">تواصل معنا</h5>
+                    <ul class="list-unstyled ps-0 pe-3">
+                        <li class="mb-3 text-muted h6"><a href="" class="text-muted">info@ifo.com</a></li>
+                        <li class="mb-3 text-muted h6 " dir="ltr"><a href="" class="text-muted">+ (258) 58 69 85</a></li>
+                        <li class="mb-3 text-muted font-19"><a href="" class="text-muted">السعودية</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+ <!-- Optional JavaScript; choose one of the two! -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+<script>
+
+    const contentButton = document.querySelector('.TopButton');
+    contentButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: document.querySelector('#contact').offsetTop,
+        behavior: 'smooth'
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const topButton = document.querySelector('.TopButton');
+      topButton.style.display = 'none';
+
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          topButton.style.display = 'block';
+        } else {
+          topButton.style.display = 'none';
+        }
+      });
+
+      topButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+</script>
+<script>
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+    });
+    $('.owl-carousel-1').owlCarousel({
+        rtl: true,
+        loop: true,
+        margin: 15,
+        nav: true,
+        navText: ['<i class="fas fa-angle-right arrow-30 rounded-circle border font-size-sub d-flex align-items-center justify-content-center mx-1 text-secondary px-2"></i>', '<i class="fas fa-angle-left arrow-30 rounded-circle border font-size-sub d-flex align-items-center justify-content-center mx-1 text-secondary px-2"></i>'],
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+    $('.owl-carousel-2').owlCarousel({
+        rtl: true,
+        loop: true,
+        margin: 20,
+        nav: true,
+        navText: ['<i class="fas fa-angle-right arrow-30 rounded-circle border font-size-sub d-flex align-items-center justify-content-center mx-1 text-secondary px-2"></i>', '<i class="fas fa-angle-left arrow-30 rounded-circle border font-size-sub d-flex align-items-center justify-content-center mx-1 text-secondary px-2"></i>'],
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+    $('.owl-carousel-3').owlCarousel({
+        rtl: true,
+        loop: true,
+        margin: 20,
+        nav: true,
+        navText: ['<i class="fas fa-angle-right arrow-30 rounded-circle border font-size-sub d-flex align-items-center justify-content-center mx-1 text-secondary px-2 end-0"></i>', '<i class="fas fa-angle-left arrow-30 rounded-circle border font-size-sub d-flex align-items-center justify-content-center mx-1 text-secondary px-2 start-0"></i>'],
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const loader = document.querySelector('#loader');
+      loader.style.display = 'none';
+    });
+
+</script>
+<script>
+    $(document).ready(function() {
+        $('.toggle-button').click(function() {
+            const $this = $(this);
+            const icon = $this.find('i');
+            if (icon.hasClass('fa-plus')) {
+                $this.css('background-color', '#317DC0').css('color', 'white');
+                icon.removeClass('fa-plus').addClass('fa-minus');
+            } else {
+                $this.css('background-color', '#F4F5F9').css('color', 'black');
+                icon.removeClass('fa-minus').addClass('fa-plus');
+            }
+        });
+    });
+</script>
+</body>
+</html>
